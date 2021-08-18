@@ -28,7 +28,7 @@ class MessagesPage extends StatelessWidget {
   Widget _delegate(BuildContext context, int index) {
     final Faker faker = Faker();
     final date = Helpers.randomDate();
-    return _MessageTitle(
+    return _MessageTile(
       messageData: MessageData(
         senderName: faker.person.name(),
         message: faker.lorem.sentence(),
@@ -40,8 +40,8 @@ class MessagesPage extends StatelessWidget {
   }
 }
 
-class _MessageTitle extends StatelessWidget {
-  const _MessageTitle({
+class _MessageTile extends StatelessWidget {
+  const _MessageTile({
     Key? key,
     required this.messageData,
   }) : super(key: key);
@@ -57,11 +57,11 @@ class _MessageTitle extends StatelessWidget {
       child: Container(
         height: 100,
         margin: const EdgeInsets.symmetric(horizontal: 8),
-        decoration: const BoxDecoration(
+        decoration: BoxDecoration(
           border: Border(
             bottom: BorderSide(
-              color: Colors.grey,
-              width: 0.2,
+              color: Theme.of(context).dividerColor,
+              width: 0.5,
             ),
           ),
         ),
@@ -158,45 +158,48 @@ class _Stories extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Card(
-      elevation: 0,
-      child: SizedBox(
-        height: 134,
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            const Padding(
-              padding: EdgeInsets.only(left: 16.0, top: 8, bottom: 16),
-              child: Text(
-                'Stories',
-                style: TextStyle(
-                  fontWeight: FontWeight.w900,
-                  fontSize: 15,
-                  color: AppColors.textFaded,
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 8.0),
+      child: Card(
+        elevation: 0,
+        child: SizedBox(
+          height: 140,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              const Padding(
+                padding: EdgeInsets.only(left: 16.0, top: 8, bottom: 16),
+                child: Text(
+                  'Stories',
+                  style: TextStyle(
+                    fontWeight: FontWeight.w900,
+                    fontSize: 15,
+                    color: AppColors.textFaded,
+                  ),
                 ),
               ),
-            ),
-            Expanded(
-              child: ListView.builder(
-                scrollDirection: Axis.horizontal,
-                itemBuilder: (BuildContext context, int index) {
-                  final faker = Faker();
-                  return Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: SizedBox(
-                      width: 60,
-                      child: _StoryCard(
-                        storyData: StoryData(
-                          name: faker.person.name(),
-                          url: Helpers.randomPictureUrl(),
+              Expanded(
+                child: ListView.builder(
+                  scrollDirection: Axis.horizontal,
+                  itemBuilder: (BuildContext context, int index) {
+                    final faker = Faker();
+                    return Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: SizedBox(
+                        width: 60,
+                        child: _StoryCard(
+                          storyData: StoryData(
+                            name: faker.person.firstName(),
+                            url: Helpers.randomPictureUrl(),
+                          ),
                         ),
                       ),
-                    ),
-                  );
-                },
-              ),
-            )
-          ],
+                    );
+                  },
+                ),
+              )
+            ],
+          ),
         ),
       ),
     );

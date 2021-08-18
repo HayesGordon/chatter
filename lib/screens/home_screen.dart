@@ -1,9 +1,5 @@
-import 'package:chatter/pages/calls_page.dart';
-import 'package:chatter/pages/contacts_page.dart';
-import 'package:chatter/pages/messages_page.dart';
-import 'package:chatter/pages/notifications_page.dart';
+import 'package:chatter/pages/pages.dart';
 import 'package:chatter/theme.dart';
-import 'package:chatter/widgets/glowing_action_button.dart';
 import 'package:chatter/widgets/widgets.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -49,7 +45,7 @@ class HomeScreen extends StatelessWidget {
               value,
               style: const TextStyle(
                 fontWeight: FontWeight.bold,
-                fontSize: 16,
+                fontSize: 17,
               ),
             );
           },
@@ -197,7 +193,7 @@ class _NavigationBarItem extends StatelessWidget {
           children: [
             Icon(
               icon,
-              size: 20,
+              size: 22,
               color: isSelected ? AppColors.secondary : null,
             ),
             const SizedBox(

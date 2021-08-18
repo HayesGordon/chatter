@@ -11,19 +11,19 @@ class Avatar extends StatelessWidget {
   const Avatar.small({
     Key? key,
     required this.url,
-  })  : radius = 16,
+  })  : radius = 18,
         super(key: key);
 
   const Avatar.medium({
     Key? key,
     required this.url,
-  })  : radius = 22,
+  })  : radius = 26,
         super(key: key);
 
   const Avatar.large({
     Key? key,
     required this.url,
-  })  : radius = 44,
+  })  : radius = 34,
         super(key: key);
 
   final double radius;

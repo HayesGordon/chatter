@@ -24,7 +24,7 @@ class IconBackground extends StatelessWidget {
           padding: const EdgeInsets.all(6),
           child: Icon(
             icon,
-            size: 18,
+            size: 22,
           ),
         ),
       ),
@@ -60,7 +60,7 @@ class IconBorder extends StatelessWidget {
           padding: const EdgeInsets.all(4),
           child: Icon(
             icon,
-            size: 16,
+            size: 22,
           ),
         ),
       ),

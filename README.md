@@ -1,16 +1,33 @@
-# chatter
+# Chatter
 
-A new Flutter project.
+[![Episode 01 Design and UI](https://img.youtube.com/vi/vgqBc7jni8c/0.jpg)](https://www.youtube.com/watch?v=vgqBc7jni8c)
 
-## Getting Started
+Video link: https://www.youtube.com/watch?v=vgqBc7jni8c
 
-This project is a starting point for a Flutter application.
+## Tutorial 01 - Create the UI and structure for the application
 
-A few resources to get you started if this is your first Flutter project:
+This branch is the final code for tutorial 01.
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+Clone this repository:
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+```bash
+git clone https://github.com/HayesGordon/chatter.git
+```
+
+And then checkout this branch:
+
+```bash
+git checkout tutorial-001-base-ui-complete
+```
+
+### Starting Code
+
+If you want the entry code for this tutorial, you can find it here:
+
+https://github.com/HayesGordon/chatter/tree/tutorial-001-base-ui
+
+Checkout instructions:
+
+```bash
+git checkout tutorial-001-base-ui
+```

@@ -1,16 +1,34 @@
-# chatter
+# Chatter - Building a Flutter chat application from scratch
 
-A new Flutter project.
+See the relevant branch for the tutorial you'd like to follow. The `main` branch has the latest source code.
 
-## Getting Started
+## Installation instructions
 
-This project is a starting point for a Flutter application.
+```bash
+git clone https://github.com/HayesGordon/chatter.git
+```
 
-A few resources to get you started if this is your first Flutter project:
+Check out the required branch
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+```bash
+git checkout {branch-name}
+```
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Install dependencies
+```bash
+flutter pub get
+```
+
+Generate the needed platform folders (Android, iOS). Some of the branches may have these already included.
+
+```bash
+flutter create .
+```
+
+## Episodes / Tutorials
+
+![thumbnail_01_ui-design](https://user-images.githubusercontent.com/13705472/130205251-5b678edb-e58e-4af3-bde3-1684e49cd7ed.jpg)
+
+**Episode 01 - Design/UI** \[ [Video](https://youtu.be/vgqBc7jni8c) \] \[ [Entry Code](https://github.com/HayesGordon/chatter/tree/tutorial-001-base-ui) \] \[ [Completed Code](https://github.com/HayesGordon/chatter/tree/tutorial-001-base-ui-complete) \] - Create the UI and structure for the application.
+
+

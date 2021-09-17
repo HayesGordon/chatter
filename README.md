@@ -25,6 +25,8 @@ Generate the needed platform folders (Android, iOS). Some of the branches may ha
 flutter create .
 ```
 
+Add your Stream app's key in `lib/app.dart`.
+
 ## Episodes / Tutorials
 
 ![thumbnail_01_ui-design](https://user-images.githubusercontent.com/13705472/130205251-5b678edb-e58e-4af3-bde3-1684e49cd7ed.jpg)

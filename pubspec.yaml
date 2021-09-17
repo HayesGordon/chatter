@@ -28,6 +28,8 @@ dependencies:
     sdk: flutter
   google_fonts: ^2.1.0
   jiffy: ^4.1.0
+  logger: ^1.1.0
+  stream_chat_flutter_core: ^2.2.1
 
 dev_dependencies:
   flutter_lints: ^1.0.4

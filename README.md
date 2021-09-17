@@ -33,4 +33,8 @@ Add your Stream app's key in `lib/app.dart`.
 
 **Episode 01 - Design/UI** \[ [Video](https://youtu.be/vgqBc7jni8c) \] \[ [Entry Code](https://github.com/HayesGordon/chatter/tree/tutorial-001-base-ui) \] \[ [Completed Code](https://github.com/HayesGordon/chatter/tree/tutorial-001-base-ui-complete) \] - Create the UI and structure for the application.
 
+![thumbnail_01_ui-design](https://user-images.githubusercontent.com/13705472/130205251-5b678edb-e58e-4af3-bde3-1684e49cd7ed.jpg)
+
+**Episode 02 - Stream API** \[ [Video](https://youtu.be/-s5iU9D5-AI) \] \[ [Entry Code](https://github.com/HayesGordon/chatter/tree/tutorial-002-stream-chat-flutter-core) \] \[ [Completed Code](https://github.com/HayesGordon/chatter/tree/tutorial-002-stream-chat-flutter-core-complete) \] - Create the UI and structure for the application.
+
 

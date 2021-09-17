@@ -1,34 +1,33 @@
-# Chatter - Building a Flutter chat application from scratch
+# Chatter
 
-See the relevant branch for the tutorial you'd like to follow. The `main` branch has the latest source code.
+[![Episode 02 Stream API](https://img.youtube.com/vi/-s5iU9D5-AI/0.jpg)](https://youtu.be/-s5iU9D5-AI)
 
-## Installation instructions
+Video link: https://youtu.be/-s5iU9D5-AI
+
+## Tutorial 02 - Stream API (Stream Chat Flutter Core)
+
+This branch is the entry point to code along with tutorial 02. In this tutorial you will connect to the [Stream API](https://getstream.io/) using the [stream_chat_flutter_core](https://pub.dev/packages/stream_chat_flutter_core) package.
+
+Clone this repository:
 
 ```bash
 git clone https://github.com/HayesGordon/chatter.git
 ```
 
-Check out the required branch
+And then checkout this branch:
 
 ```bash
-git checkout {branch-name}
+git checkout tutorial-002-stream-chat-flutter-core
 ```
 
-Install dependencies
+### Finished Code
+
+If you want the completed code for this tutorial, you can find it here:
+
+https://github.com/HayesGordon/chatter/tree/tutorial-002-stream-chat-flutter-core-complete
+
+Checkout instructions:
+
 ```bash
-flutter pub get
+git checkout tutorial-002-stream-chat-flutter-core-complete
 ```
-
-Generate the needed platform folders (Android, iOS). Some of the branches may have these already included.
-
-```bash
-flutter create .
-```
-
-## Episodes / Tutorials
-
-![thumbnail_01_ui-design](https://user-images.githubusercontent.com/13705472/130205251-5b678edb-e58e-4af3-bde3-1684e49cd7ed.jpg)
-
-**Episode 01 - Design/UI** \[ [Video](https://youtu.be/vgqBc7jni8c) \] \[ [Entry Code](https://github.com/HayesGordon/chatter/tree/tutorial-001-base-ui) \] \[ [Completed Code](https://github.com/HayesGordon/chatter/tree/tutorial-001-base-ui-complete) \] - Create the UI and structure for the application.
-
-

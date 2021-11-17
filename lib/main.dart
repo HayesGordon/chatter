@@ -1,3 +1,4 @@
+import 'package:chatter/app.dart';
 import 'package:chatter/screens/screens.dart';
 import 'package:chatter/theme.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -8,7 +9,7 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
 
-  final client = StreamChatClient('jumq4k8zvqjx');
+  final client = StreamChatClient(streamKey);
 
   runApp(
     MyApp(

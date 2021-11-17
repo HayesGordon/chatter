@@ -60,10 +60,6 @@ class _ChatScreenState extends State<ChatScreen> {
       onTap: () => FocusScope.of(context).unfocus(),
       child: Scaffold(
         appBar: AppBar(
-          iconTheme: Theme.of(context).iconTheme,
-          centerTitle: false,
-          backgroundColor: Colors.transparent,
-          elevation: 0,
           leadingWidth: 54,
           leading: Align(
             alignment: Alignment.centerRight,

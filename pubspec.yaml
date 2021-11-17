@@ -22,14 +22,17 @@ environment:
 
 dependencies:
   cached_network_image: ^3.1.0
+  cloud_functions: ^3.0.5
   cupertino_icons: ^1.0.2
   faker: ^2.0.0
+  firebase_auth: ^3.1.4
+  firebase_core: ^1.8.0
   flutter:
     sdk: flutter
   google_fonts: ^2.1.0
   jiffy: ^4.1.0
   logger: ^1.1.0
-  stream_chat_flutter_core: ^2.2.1
+  stream_chat_flutter_core: ^3.2.0
 
 dev_dependencies:
   flutter_lints: ^1.0.4

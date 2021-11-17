@@ -1,7 +1,9 @@
+import 'package:chatter/app.dart';
 import 'package:chatter/screens/screens.dart';
 import 'package:chatter/widgets/widgets.dart';
+import 'package:firebase_auth/firebase_auth.dart' as firebase;
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:chatter/app.dart';
 import 'package:stream_chat_flutter_core/stream_chat_flutter_core.dart';
 
 class ProfileScreen extends StatelessWidget {
@@ -15,8 +17,15 @@ class ProfileScreen extends StatelessWidget {
     final user = context.currentUser;
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.transparent,
-        elevation: 0,
+        title: const Text('Profile'),
+        leading: Center(
+          child: IconBackground(
+            icon: Icons.arrow_back_ios_new,
+            onTap: () {
+              Navigator.of(context).pop();
+            },
+          ),
+        ),
       ),
       body: Center(
         child: Column(
@@ -57,8 +66,9 @@ class __SignOutButtonState extends State<_SignOutButton> {
 
     try {
       await StreamChatCore.of(context).client.disconnectUser();
+      await firebase.FirebaseAuth.instance.signOut();
 
-      Navigator.of(context).push(SelectUserScreen.route);
+      Navigator.of(context).pushReplacement(SplashScreen.route);
     } on Exception catch (e, st) {
       logger.e('Could not sign out', e, st);
       setState(() {

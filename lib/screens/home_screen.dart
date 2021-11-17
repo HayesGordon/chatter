@@ -5,8 +5,12 @@ import 'package:chatter/widgets/widgets.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:chatter/app.dart';
+import 'package:flutter/services.dart';
 
 class HomeScreen extends StatelessWidget {
+  static Route get route => MaterialPageRoute(
+        builder: (context) => HomeScreen(),
+      );
   HomeScreen({Key? key}) : super(key: key);
 
   final ValueNotifier<int> pageIndex = ValueNotifier(0);
@@ -35,20 +39,9 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        iconTheme: Theme.of(context).iconTheme,
-        backgroundColor: Colors.transparent,
-        elevation: 0,
         title: ValueListenableBuilder(
           valueListenable: title,
-          builder: (BuildContext context, String value, _) {
-            return Text(
-              value,
-              style: const TextStyle(
-                fontWeight: FontWeight.bold,
-                fontSize: 17,
-              ),
-            );
-          },
+          builder: (BuildContext context, String value, _) => Text(value),
         ),
         leadingWidth: 54,
         leading: Align(
@@ -56,7 +49,7 @@ class HomeScreen extends StatelessWidget {
           child: IconBackground(
             icon: Icons.search,
             onTap: () {
-              print('TODO search');
+              logger.i('TODO search');
             },
           ),
         ),

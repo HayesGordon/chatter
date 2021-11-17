@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 abstract class AppColors {
@@ -25,19 +26,37 @@ abstract class _DarkColors {
 }
 
 /// Reference to the application theme.
-abstract class AppTheme {
+class AppTheme {
   static const accentColor = AppColors.accent;
   static final visualDensity = VisualDensity.adaptivePlatformDensity;
 
+  final darkBase = ThemeData.dark();
+  final lightBase = ThemeData.light();
+
   /// Light theme and its settings.
-  static ThemeData light() => ThemeData(
+  ThemeData get light => ThemeData(
         brightness: Brightness.light,
-        accentColor: accentColor,
+        colorScheme: lightBase.colorScheme.copyWith(secondary: accentColor),
         visualDensity: visualDensity,
         textTheme:
             GoogleFonts.mulishTextTheme().apply(bodyColor: AppColors.textDark),
         backgroundColor: _LightColors.background,
+        appBarTheme: lightBase.appBarTheme.copyWith(
+          iconTheme: lightBase.iconTheme,
+          backgroundColor: Colors.transparent,
+          elevation: 0,
+          centerTitle: true,
+          titleTextStyle: const TextStyle(
+            fontWeight: FontWeight.bold,
+            fontSize: 17,
+            color: AppColors.textDark,
+          ),
+          systemOverlayStyle: SystemUiOverlayStyle.dark,
+        ),
         scaffoldBackgroundColor: _LightColors.background,
+        elevatedButtonTheme: ElevatedButtonThemeData(
+          style: ElevatedButton.styleFrom(primary: AppColors.secondary),
+        ),
         cardColor: _LightColors.card,
         primaryTextTheme: const TextTheme(
           headline6: TextStyle(color: AppColors.textDark),
@@ -46,14 +65,27 @@ abstract class AppTheme {
       );
 
   /// Dark theme and its settings.
-  static ThemeData dark() => ThemeData(
+  ThemeData get dark => ThemeData(
         brightness: Brightness.dark,
-        accentColor: accentColor,
+        colorScheme: darkBase.colorScheme.copyWith(secondary: accentColor),
         visualDensity: visualDensity,
         textTheme:
             GoogleFonts.interTextTheme().apply(bodyColor: AppColors.textLigth),
         backgroundColor: _DarkColors.background,
+        appBarTheme: darkBase.appBarTheme.copyWith(
+          backgroundColor: Colors.transparent,
+          elevation: 0,
+          centerTitle: true,
+          titleTextStyle: const TextStyle(
+            fontWeight: FontWeight.bold,
+            fontSize: 17,
+          ),
+          systemOverlayStyle: SystemUiOverlayStyle.light,
+        ),
         scaffoldBackgroundColor: _DarkColors.background,
+        elevatedButtonTheme: ElevatedButtonThemeData(
+          style: ElevatedButton.styleFrom(primary: AppColors.secondary),
+        ),
         cardColor: _DarkColors.card,
         primaryTextTheme: const TextTheme(
           headline6: TextStyle(color: AppColors.textLigth),

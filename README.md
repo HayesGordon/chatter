@@ -1,40 +1,39 @@
-# Chatter - Building a Flutter chat application from scratch
+# Chatter
 
-See the relevant branch for the tutorial you'd like to follow. The `main` branch has the latest source code.
+[![Episode 03 Stream API](https://img.youtube.com/vi/y6OlrO3Bzag/0.jpg)](https://youtu.be/y6OlrO3Bzag)
 
-## Installation instructions
+Video link: https://youtu.be/y6OlrO3Bzag
+
+## Tutorial 03 - Firebase Auth and Cloud Functions (Generate Stream user tokens)
+
+This branch is the final code for tutorial 03. In this tutorial we add [Firebase](https://firebase.google.com/) authentication to authenticate users. After they are authenticated we use Firebase Cloud Functions to securely generate Stream API user tokens.
+
+There is also a [written guide](https://getstream.io/chat/docs/sdk/flutter/guides/token_generation_with_firebase/) showing how to securely generate Stream user tokens using Firebase Cloud Functions.
+
+Clone this repository:
 
 ```bash
 git clone https://github.com/HayesGordon/chatter.git
 ```
 
-Check out the required branch
+And then checkout this branch:
 
 ```bash
-git checkout {branch-name}
+git checkout tutorial-003-firebase-authentication-complete
 ```
 
-Install dependencies
+### Starting Code
+
+If you want the entry code for this tutorial, you can find it here:
+
+https://github.com/HayesGordon/chatter/tree/tutorial-003-firebase-authentication
+
+Checkout instructions:
+
 ```bash
-flutter pub get
+git tutorial-003-firebase-authentication
 ```
 
-Generate the needed platform folders (Android, iOS). Some of the branches may have these already included.
-
-```bash
-flutter create .
-```
-
-Add your Stream app's key in `lib/app.dart`.
-
-## Episodes / Tutorials
-
-![Episode 1 - Design/UI](https://user-images.githubusercontent.com/13705472/133966143-57658323-8de3-4060-b4cc-343c8c17cda1.jpg)
-
-**Episode 01 - Design/UI** \[ [Video](https://youtu.be/vgqBc7jni8c) \] \[ [Entry Code](https://github.com/HayesGordon/chatter/tree/tutorial-001-base-ui) \] \[ [Completed Code](https://github.com/HayesGordon/chatter/tree/tutorial-001-base-ui-complete) \] - Create the UI and structure for the application.
-
-![Episode 02 - Stream API](https://user-images.githubusercontent.com/13705472/133966035-96604a21-0625-4114-a76d-bb938c72493f.jpg)
-
-**Episode 02 - Stream API** \[ [Video](https://youtu.be/-s5iU9D5-AI) \] \[ [Entry Code](https://github.com/HayesGordon/chatter/tree/tutorial-002-stream-chat-flutter-core) \] \[ [Completed Code](https://github.com/HayesGordon/chatter/tree/tutorial-002-stream-chat-flutter-core-complete) \] - Connect to the Stream API with basic chat functionality
 
 
+**Episode 03 - Firebase Auth and Functions** \[ [Video](https://youtu.be/y6OlrO3Bzag) \] \[ [Entry Code](https://github.com/HayesGordon/chatter/tree/tutorial-003-firebase-authentication) \] \[ [Completed Code](https://github.com/HayesGordon/chatter/tree/tutorial-003-firebase-authentication-complete) \] - Use Firebase Authentication and Cloud Function to generate Stream API user tokens

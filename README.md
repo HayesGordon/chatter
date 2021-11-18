@@ -41,6 +41,6 @@ From [episode 3](https://github.com/HayesGordon/chatter/tree/tutorial-002-stream
 
 **Episode 02 - Stream API** \[ [Video](https://youtu.be/-s5iU9D5-AI) \] \[ [Entry Code](https://github.com/HayesGordon/chatter/tree/tutorial-002-stream-chat-flutter-core) \] \[ [Completed Code](https://github.com/HayesGordon/chatter/tree/tutorial-002-stream-chat-flutter-core-complete) \] - Connect to the Stream API with basic chat functionality
 
-![Episode 03 - Firebase Auth and Functions](https://user-images.githubusercontent.com/13705472/142460816-e8eafd74-1884-41f3-8935-cb0611610331.jpg)
+![Episode 03 - Firebase Auth and Functions](https://user-images.githubusercontent.com/13705472/142461222-6df1c049-b265-4d6c-ab2c-81540ccc6904.jpg)
 
 **Episode 03 - Firebase Auth and Functions** \[ [Video](https://youtu.be/y6OlrO3Bzag) \] \[ [Entry Code](https://github.com/HayesGordon/chatter/tree/tutorial-003-firebase-authentication) \] \[ [Completed Code](https://github.com/HayesGordon/chatter/tree/tutorial-003-firebase-authentication-complete) \] - Use Firebase Authentication and Cloud Function to generate Stream API user tokens

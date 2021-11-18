@@ -31,5 +31,5 @@ https://github.com/HayesGordon/chatter/tree/tutorial-003-firebase-authentication
 Checkout instructions:
 
 ```bash
-git tutorial-003-firebase-authentication
+git checkout tutorial-003-firebase-authentication
 ```

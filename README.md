@@ -25,7 +25,11 @@ Generate the needed platform folders (Android, iOS). Some of the branches may ha
 flutter create .
 ```
 
+## Further Setup
+
 Add your Stream app's key in `lib/app.dart`.
+
+From [episode 3](https://github.com/HayesGordon/chatter/tree/tutorial-002-stream-chat-flutter-core-complete) the application requires Firebase Authentication and Cloud Functions to be setup. See the third [tutorial video](https://youtu.be/-s5iU9D5-AI) for complete information.
 
 ## Episodes / Tutorials
 
@@ -37,4 +41,4 @@ Add your Stream app's key in `lib/app.dart`.
 
 **Episode 02 - Stream API** \[ [Video](https://youtu.be/-s5iU9D5-AI) \] \[ [Entry Code](https://github.com/HayesGordon/chatter/tree/tutorial-002-stream-chat-flutter-core) \] \[ [Completed Code](https://github.com/HayesGordon/chatter/tree/tutorial-002-stream-chat-flutter-core-complete) \] - Connect to the Stream API with basic chat functionality
 
-
+**Episode 03 - Firebase Auth and Functions** \[ [Video](https://youtu.be/y6OlrO3Bzag) \] \[ [Entry Code](https://github.com/HayesGordon/chatter/tree/tutorial-003-firebase-authentication) \] \[ [Completed Code](https://github.com/HayesGordon/chatter/tree/tutorial-003-firebase-authentication-complete) \] - Use Firebase Authentication and Cloud Function to generate Stream API user tokens

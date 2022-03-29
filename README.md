@@ -9,12 +9,17 @@
 </p>
 
 <p align="center">  
-Chatter is a demo application showing how to create a chat application from scratch using <a href="https://flutter.dev/">Flutter</a> and the <a href="https://pub.dev/packages/stream_chat_flutter_core/">Stream Chat Flutter Core package</a>.
+Chatter is a demo application showing how to create a chat app from scratch using <a href="https://flutter.dev/">Flutter</a> and the <a href="https://pub.dev/packages/stream_chat_flutter_core/">Stream Chat Flutter Core package</a>.
 </br>
 
 <p align="center">
 <img src="https://user-images.githubusercontent.com/13705472/160611526-5caf7e95-4377-4798-881b-7a6c6e932c6b.gif" />
 </p>
+
+## Where To Start
+If you're new to Stream Chat Flutter, we recommend taking a look at the official tutorial: https://getstream.io/chat/flutter/tutorial/
+
+Or take a look a the tutorial videos: [Chatter YouTube series playlist](https://www.youtube.com/watch?v=vgqBc7jni8c&list=PLNBhvhkAJG6sH7dkmwt4BiCclFkMoXq4r)
 
 ## Installation Instructions
 

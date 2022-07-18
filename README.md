@@ -19,7 +19,7 @@ Chatter is a demo application showing how to create a chat app from scratch usin
 ## Where To Start
 If you're new to Stream Chat Flutter, we recommend taking a look at the official tutorial: https://getstream.io/chat/flutter/tutorial/
 
-Or take a look a the tutorial videos: [Chatter YouTube series playlist](https://www.youtube.com/watch?v=vgqBc7jni8c&list=PLNBhvhkAJG6sH7dkmwt4BiCclFkMoXq4r)
+Or take a look at the tutorial videos: [Chatter YouTube series playlist](https://www.youtube.com/watch?v=vgqBc7jni8c&list=PLNBhvhkAJG6sH7dkmwt4BiCclFkMoXq4r)
 
 ## Installation Instructions
 

@@ -43,6 +43,7 @@ class _SignInScreenState extends State<SignInScreen> {
 
         final user = creds.user;
 
+        if (!mounted) return;
         if (user == null) {
           ScaffoldMessenger.of(context).showSnackBar(
             const SnackBar(content: Text('User is empty')),
@@ -51,21 +52,33 @@ class _SignInScreenState extends State<SignInScreen> {
         }
 
         // Get Stream user token from Firebase Functions
-        final callable = functions.httpsCallable('getStreamUserToken');
-        final results = await callable();
+        final results = await functions
+            .httpsCallable('ext-auth-chat-getStreamUserToken')
+            .call();
 
-        // Connnect stream user
-        final client = StreamChatCore.of(context).client;
-        await client.connectUser(
-          User(id: creds.user!.uid),
-          results.data,
-        );
+        if (mounted) {
+          // Connnect stream user
+          final client = StreamChatCore.of(context).client;
+          await client.connectUser(
+            User(id: creds.user!.uid),
+            results.data,
+          );
+        }
 
-        // Navigate to home screen
-        await Navigator.of(context).pushReplacement(HomeScreen.route);
+        if (mounted) {
+          // Navigate to home screen
+          await Navigator.of(context).pushReplacement(HomeScreen.route);
+        }
       } on firebase.FirebaseAuthException catch (e) {
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(content: Text(e.message ?? 'Auth error')),
+        );
+      } on FirebaseFunctionsException catch (e) {
+        logger.e(e.code);
+        logger.e(e.message);
+        logger.e(e.details);
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(content: Text('Error retrieving Stream Chat token')),
         );
       } catch (e, st) {
         logger.e('Sign in error, ', e, st);

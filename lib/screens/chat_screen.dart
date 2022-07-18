@@ -1,10 +1,8 @@
 import 'dart:async';
 
 import 'package:chatter/helpers.dart';
-import 'package:chatter/widgets/display_error_message.dart';
 import 'package:collection/collection.dart' show IterableExtension;
 import 'package:chatter/theme.dart';
-import 'package:chatter/widgets/glowing_action_button.dart';
 import 'package:chatter/widgets/widgets.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -25,7 +23,7 @@ class ChatScreen extends StatefulWidget {
   }) : super(key: key);
 
   @override
-  _ChatScreenState createState() => _ChatScreenState();
+  State<ChatScreen> createState() => _ChatScreenState();
 }
 
 class _ChatScreenState extends State<ChatScreen> {
@@ -572,21 +570,39 @@ class _ActionBar extends StatefulWidget {
 }
 
 class __ActionBarState extends State<_ActionBar> {
-  final TextEditingController controller = TextEditingController();
+  final StreamMessageInputController controller =
+      StreamMessageInputController();
+
+  Timer? _debounce;
 
   Future<void> _sendMessage() async {
     if (controller.text.isNotEmpty) {
-      StreamChannel.of(context)
-          .channel
-          .sendMessage(Message(text: controller.text));
+      StreamChannel.of(context).channel.sendMessage(controller.message);
       controller.clear();
       FocusScope.of(context).unfocus();
     }
   }
 
+  void _onTextChange() {
+    if (_debounce?.isActive ?? false) _debounce?.cancel();
+    _debounce = Timer(const Duration(seconds: 1), () {
+      if (mounted) {
+        StreamChannel.of(context).channel.keyStroke();
+      }
+    });
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    controller.addListener(_onTextChange);
+  }
+
   @override
   void dispose() {
+    controller.removeListener(_onTextChange);
     controller.dispose();
+
     super.dispose();
   }
 
@@ -617,9 +633,9 @@ class __ActionBarState extends State<_ActionBar> {
             child: Padding(
               padding: const EdgeInsets.only(left: 16.0),
               child: TextField(
-                controller: controller,
+                controller: controller.textEditingController,
                 onChanged: (val) {
-                  StreamChannel.of(context).channel.keyStroke();
+                  controller.text = val;
                 },
                 style: const TextStyle(fontSize: 14),
                 decoration: const InputDecoration(

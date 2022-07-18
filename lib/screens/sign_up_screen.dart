@@ -44,11 +44,13 @@ class _SignUpScreenState extends State<SignUpScreen> {
           password: _passwordController.text,
         );
         final user = creds.user;
-        if (user == null) {
-          ScaffoldMessenger.of(context).showSnackBar(
-            const SnackBar(content: Text('User is empty')),
-          );
-          return;
+        if (mounted) {
+          if (user == null) {
+            ScaffoldMessenger.of(context).showSnackBar(
+              const SnackBar(content: Text('User is empty')),
+            );
+            return;
+          }
         }
 
         // Set Firebase display name and profile picture
@@ -61,20 +63,25 @@ class _SignUpScreenState extends State<SignUpScreen> {
         await Future.wait(futures);
 
         // Create Stream user and get token using Firebase Functions
-        final callable = functions.httpsCallable('createStreamUserAndGetToken');
-        final results = await callable();
+        final results = await functions
+            .httpsCallable('ext-auth-chat-getStreamUserToken')
+            .call();
 
         // Connect user to Stream and set user data
+        if (!mounted) return;
         final client = StreamChatCore.of(context).client;
+        final streamUser = User(
+          id: creds.user!.uid,
+          name: _nameController.text,
+          image: _profilePictureController.text,
+        );
         await client.connectUser(
-          User(
-            id: creds.user!.uid,
-            name: _nameController.text,
-            image: _profilePictureController.text,
-          ),
+          streamUser,
           results.data,
         );
+        await client.updateUser(streamUser);
 
+        if (!mounted) return;
         // Navigate to home screen
         await Navigator.of(context).pushReplacement(HomeScreen.route);
       } on firebase.FirebaseAuthException catch (e) {

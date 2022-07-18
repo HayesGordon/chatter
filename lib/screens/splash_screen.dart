@@ -6,8 +6,6 @@ import 'package:firebase_auth/firebase_auth.dart' as firebase;
 import 'package:flutter/material.dart';
 import 'package:stream_chat_flutter_core/stream_chat_flutter_core.dart';
 
-import 'home_screen.dart';
-
 class SplashScreen extends StatefulWidget {
   static Route get route => MaterialPageRoute(
         builder: (context) => const SplashScreen(),
@@ -35,15 +33,17 @@ class _SplashScreenState extends State<SplashScreen> {
     listener = auth.authStateChanges().listen((user) async {
       if (user != null) {
         // get Stream user token
-        final callable =
-            FirebaseFunctions.instance.httpsCallable('getStreamUserToken');
+        final callable = FirebaseFunctions.instance
+            .httpsCallable('ext-auth-chat-getStreamUserToken')
+            .call();
 
         final results = await Future.wait([
-          callable(),
+          callable,
           // delay to show loading indicator
           Future.delayed(const Duration(milliseconds: 700)),
         ]);
 
+        if (!mounted) return;
         // connect Stream user
         final client = StreamChatCore.of(context).client;
         await client.connectUser(
@@ -51,11 +51,14 @@ class _SplashScreenState extends State<SplashScreen> {
           results[0]!.data,
         );
 
+        if (!mounted) return;
         // authenticated
         Navigator.of(context).pushReplacement(HomeScreen.route);
       } else {
         // delay to show loading indicator
         await Future.delayed(const Duration(milliseconds: 700));
+
+        if (!mounted) return;
         // not authenticated
         Navigator.of(context).pushReplacement(SignInScreen.route);
       }

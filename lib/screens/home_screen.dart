@@ -5,7 +5,6 @@ import 'package:chatter/widgets/widgets.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:chatter/app.dart';
-import 'package:flutter/services.dart';
 
 class HomeScreen extends StatelessWidget {
   static Route get route => MaterialPageRoute(

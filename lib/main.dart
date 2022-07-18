@@ -1,4 +1,5 @@
 import 'package:chatter/app.dart';
+import 'package:chatter/firebase_options.dart';
 import 'package:chatter/screens/screens.dart';
 import 'package:chatter/theme.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -7,7 +8,7 @@ import 'package:stream_chat_flutter_core/stream_chat_flutter_core.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp();
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
 
   final client = StreamChatClient(streamKey);
 
@@ -40,11 +41,7 @@ class MyApp extends StatelessWidget {
       builder: (context, child) {
         return StreamChatCore(
           client: client,
-          child: ChannelsBloc(
-            child: UsersBloc(
-              child: child!,
-            ),
-          ),
+          child: child!,
         );
       },
       home: const SplashScreen(),

@@ -19,7 +19,11 @@ Chatter is a demo application showing how to create a chat app from scratch usin
 ## Where To Start
 If you're new to Stream Chat Flutter, we recommend taking a look at the official tutorial: https://getstream.io/chat/flutter/tutorial/
 
-Or take a look at the tutorial videos: [Chatter YouTube series playlist](https://www.youtube.com/watch?v=vgqBc7jni8c&list=PLNBhvhkAJG6sH7dkmwt4BiCclFkMoXq4r)
+Using the Stream Chat Flutter package you'll get a full working chat experience with minimal code.
+
+This repository demonstrates how to use the [Stream Chat Flutter Core package](https://pub.dev/packages/stream_chat_flutter_core) to build your own UI components from scratch.
+
+The video tutorials provide a step-by-step guide to understand the code in this repository: [Chatter YouTube series playlist](https://www.youtube.com/watch?v=vgqBc7jni8c&list=PLNBhvhkAJG6sH7dkmwt4BiCclFkMoXq4r)
 
 ## Installation Instructions
 
@@ -52,15 +56,15 @@ In the [third tutorial](https://github.com/HayesGordon/chatter/tree/tutorial-003
 
 ## Episodes / Tutorials
 
-![Episode 1 - Design/UI](https://user-images.githubusercontent.com/13705472/133966143-57658323-8de3-4060-b4cc-343c8c17cda1.jpg)
+![Episode 1 - Design/UI](https://user-images.githubusercontent.com/13705472/180417054-c4ad5b5f-cab0-467b-950c-80aec2cefb75.jpg)
 
 **Episode 01 - Design/UI** \[ [Video](https://youtu.be/vgqBc7jni8c) \] \[ [Entry Code](https://github.com/HayesGordon/chatter/tree/tutorial-001-base-ui) \] \[ [Completed Code](https://github.com/HayesGordon/chatter/tree/tutorial-001-base-ui-complete) \] - Create the UI and structure for the application.
 
-![Episode 02 - Stream API](https://user-images.githubusercontent.com/13705472/133966035-96604a21-0625-4114-a76d-bb938c72493f.jpg)
+![Episode 02 - Stream API](https://user-images.githubusercontent.com/13705472/180417137-437fbf38-6288-4fbc-9482-96a3dc804d85.jpg)
 
 **Episode 02 - Stream API** \[ [Video](https://youtu.be/-s5iU9D5-AI) \] \[ [Entry Code](https://github.com/HayesGordon/chatter/tree/tutorial-002-stream-chat-flutter-core) \] \[ [Completed Code](https://github.com/HayesGordon/chatter/tree/tutorial-002-stream-chat-flutter-core-complete) \] - Connect to the Stream API with basic chat functionality
 
-![Episode 03 - Firebase Auth and Functions](https://user-images.githubusercontent.com/13705472/142461222-6df1c049-b265-4d6c-ab2c-81540ccc6904.jpg)
+![Episode 03 - Firebase Auth and Functions](https://user-images.githubusercontent.com/13705472/180417232-fac3de36-19ad-4bd2-9f35-298dac9475c1.jpg)
 
 **Episode 03 - Firebase Auth and Functions** \[ [Video](https://youtu.be/y6OlrO3Bzag) \] \[ [Entry Code](https://github.com/HayesGordon/chatter/tree/tutorial-003-firebase-authentication) \] \[ [Completed Code](https://github.com/HayesGordon/chatter/tree/tutorial-003-firebase-authentication-complete) \] - Use Firebase Authentication and Cloud Function to generate Stream API user tokens
 

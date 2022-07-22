@@ -1,7 +1,7 @@
 <h1 align="center">Chatter - Building a Flutter Chat Application From Scratch</h1>
 
 <p align="center">
-    <a href="https://pub.dev/packages/stream_feed_flutter_core"><img src="https://img.shields.io/pub/v/stream_feed_flutter_core?include_prereleases" alt="Pub"></a>
+    <a href="https://pub.dev/packages/stream_chat_flutter_core"><img src="https://img.shields.io/pub/v/stream_chat_flutter_core?include_prereleases" alt="Pub"></a>
     <a href="https://pub.dev/packages/flutter_lints"><img src="https://img.shields.io/badge/style-flutter__lints-blue" alt="style: flutter lints"></a>
     <a href="https://github.com/GetStream/flutter-samples"><img src="https://img.shields.io/badge/flutter-samples-teal.svg?longCache=true" alt="Flutter Samples"></a>
     <a href="https://opensource.org/licenses/Apache-2.0"><img alt="License" src="https://img.shields.io/badge/License-Apache%202.0-blue.svg"/></a>
@@ -24,6 +24,9 @@ Using the Stream Chat Flutter package you'll get a full working chat experience 
 This repository demonstrates how to use the [Stream Chat Flutter Core package](https://pub.dev/packages/stream_chat_flutter_core) to build your own UI components from scratch.
 
 The video tutorials provide a step-by-step guide to understand the code in this repository: [Chatter YouTube series playlist](https://www.youtube.com/watch?v=vgqBc7jni8c&list=PLNBhvhkAJG6sH7dkmwt4BiCclFkMoXq4r)
+
+## More Samples
+Looking for more Flutter content? Take a look at our [samples repository](https://github.com/GetStream/flutter-samples) to see what you can create using Stream and Flutter.
 
 ## Installation Instructions
 

@@ -48,7 +48,7 @@ flutter create .
 
 Add your Stream app's key in `lib/app.dart`.
 
-From [episode 3](https://github.com/HayesGordon/chatter/tree/tutorial-002-stream-chat-flutter-core-complete) the application requires Firebase Authentication and Cloud Functions to be setup. See the third [tutorial video](https://youtu.be/-s5iU9D5-AI) for complete information.
+In the [third tutorial](https://github.com/HayesGordon/chatter/tree/tutorial-003-firebase-authentication) the application requires Firebase Authentication and Cloud Functions to be setup. From the [fourth tutorial](https://github.com/HayesGordon/chatter/tree/tutorial-004-version-four-and-firebase-extensions) this is even easier with [Stream's Firebase Extensions](https://getstream.io/blog/stream-firebase-extensions/), see the [video](https://youtu.be/Dt_taxX98sg) for more information.
 
 ## Episodes / Tutorials
 
@@ -63,3 +63,7 @@ From [episode 3](https://github.com/HayesGordon/chatter/tree/tutorial-002-stream
 ![Episode 03 - Firebase Auth and Functions](https://user-images.githubusercontent.com/13705472/142461222-6df1c049-b265-4d6c-ab2c-81540ccc6904.jpg)
 
 **Episode 03 - Firebase Auth and Functions** \[ [Video](https://youtu.be/y6OlrO3Bzag) \] \[ [Entry Code](https://github.com/HayesGordon/chatter/tree/tutorial-003-firebase-authentication) \] \[ [Completed Code](https://github.com/HayesGordon/chatter/tree/tutorial-003-firebase-authentication-complete) \] - Use Firebase Authentication and Cloud Function to generate Stream API user tokens
+
+![Episode 04 - Migrate Version 4 & Stream Firebase Extensions](https://user-images.githubusercontent.com/13705472/180415364-35520085-cff0-4139-8672-f60e089b3c6a.jpg)
+
+**Episode 04 - Migrate Version 4 & Stream Firebase Extensions** \[ [Video](https://youtu.be/Dt_taxX98sg) \] \[ [Entry Code](https://github.com/HayesGordon/chatter/tree/tutorial-004-version-four-and-firebase-extensions) \] \[ [Completed Code](https://github.com/HayesGordon/chatter/tree/tutorial-004-version-four-and-firebase-extensions) \] - Make use of Stream's Firebase Extensions to simplify authentication and migrate to V4 of the [Stream Chat Flutter Core](https://pub.dev/packages/stream_chat_flutter_core) SDK.

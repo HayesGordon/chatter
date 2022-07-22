@@ -1,6 +1,8 @@
 # Chatter
 
-:warning work in progress
+[![Episode 04 Version 4 Migration and Firebase Extensions](https://img.youtube.com/vi/Dt_taxX98sg/0.jpg)](https://youtu.be/Dt_taxX98sg)
+
+Video link: https://youtu.be/Dt_taxX98sg
 
 ## Tutorial 04 - Migrate to Version 4 and Stream Firebase Extensions
 

@@ -4,9 +4,9 @@
 
 Video link: https://www.youtube.com/watch?v=vgqBc7jni8c
 
-## Tutorial 01 - Create the UI and structure for the application
+## Tutorial 01 - Create the UI and Structure for the Application
 
-This branch is the entry point to code along with tutorial 01.
+This branch is the entry point to code along with tutorial 01. In this tutorial we add the UI and code structure for our application.
 
 Clone this repository:
 

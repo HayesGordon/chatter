@@ -66,8 +66,10 @@ class AppTheme {
 
   /// Dark theme and its settings.
   ThemeData get dark => ThemeData(
-        brightness: Brightness.dark,
-        colorScheme: darkBase.colorScheme.copyWith(secondary: accentColor),
+        colorScheme: darkBase.colorScheme.copyWith(
+          secondary: accentColor, 
+          brightness: Brightness.dark,
+        ),
         visualDensity: visualDensity,
         textTheme:
             GoogleFonts.interTextTheme().apply(bodyColor: AppColors.textLigth),

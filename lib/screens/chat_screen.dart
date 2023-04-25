@@ -633,7 +633,7 @@ class __ActionBarState extends State<_ActionBar> {
             child: Padding(
               padding: const EdgeInsets.only(left: 16.0),
               child: TextField(
-                controller: controller.textEditingController,
+                controller: controller.textFieldController,
                 onChanged: (val) {
                   controller.text = val;
                 },

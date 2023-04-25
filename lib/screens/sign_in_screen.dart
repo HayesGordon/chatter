@@ -181,7 +181,7 @@ class _SignInScreenState extends State<SignInScreen> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Text('Already have an account?',
-                              style: Theme.of(context).textTheme.subtitle2),
+                              style: Theme.of(context).textTheme.titleSmall),
                           const SizedBox(width: 8),
                           TextButton(
                             onPressed: () {
